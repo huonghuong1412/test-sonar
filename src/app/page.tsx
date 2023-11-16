@@ -3,37 +3,22 @@ import Image from 'next/image'
 export default function Home() {
   const A = 5;
 
-  const testFunc = (a: any) => {
-    if (typeof a === 'string') {
-      return 'string';
-    } else {
-      return 'number';
-    }
+  const twoSum = (a: number, b: number) => {
+    return a + b;
   }
 
-  const testFunc2 = (b: any) => {
-    if (typeof b === 'string') {
-      return 'string';
-    } else {
-      return 'number';
-    } 
-  }
-
-  const testFunc3 = (c: any) => {
-    if (typeof c === 'number') {
-      return 'number';
-    } else {
-      return 'number';
-    } 
+  const twoSum2 = (a: number, b: number) => {
+    return a + b;
   }
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       
       <h1>{A}</h1>
-      <h1>{testFunc(A)}</h1>
-      <h1>{testFunc2(A)}</h1>
-      <h1>{testFunc3(A)}</h1>
+      <h1>{twoSum(1, 2)}</h1>
+      <h1>{twoSum(3, 4)}</h1>
+      <h1>{twoSum2(1, 2)}</h1>
+      <h1>{twoSum2(3, 4)}</h1>
       
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
         <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
