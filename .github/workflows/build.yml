@@ -1,6 +1,9 @@
 name: CI
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   Build:
@@ -12,11 +15,10 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-node@v2
         with:
-          node-version: "14"
-          cache: "yarn"
-      - run: yarn install
-      - run: yarn lint
-      - run: yarn test:coverage
+          node-version: 18
+
+      - name: Install Dependencies
+        run: npm ci
       # The build is already made by Vercel when deploying
       - name: SonarCloud Scan
         uses: sonarsource/sonarcloud-github-action@master
