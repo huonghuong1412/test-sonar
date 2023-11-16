@@ -2,6 +2,29 @@ import Image from 'next/image'
 
 export default function Home() {
   const A = 5;
+
+  const testFunc = (a: any) => {
+    if (a > 4) {
+      if (a > 5) {
+        if (a > 6) {
+          if (a > 7) {
+            return 1;
+          } else {
+            return 2;
+          }
+        } else {
+          return 3;
+        }
+      } else {
+        return 4;
+      }
+    } else if ( a > 10 ) {
+      return 5;
+    } else {
+      return 6;
+    }
+  }
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       
